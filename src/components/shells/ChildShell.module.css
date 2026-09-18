@@ -1,0 +1,15 @@
+.shell {
+  position: relative;
+  max-width: var(--kid-max);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-app);
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 var(--gutter-mobile) 96px;
+}

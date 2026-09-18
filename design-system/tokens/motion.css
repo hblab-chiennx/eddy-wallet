@@ -1,0 +1,8 @@
+:root{
+  --dur-instant:90ms; /* @kind other */ --dur-fast:160ms; /* @kind other */ --dur-base:240ms; /* @kind other */ --dur-slow:420ms; /* @kind other */ --dur-celebrate:720ms; /* @kind other */
+  --ease-out:cubic-bezier(0.22,0.8,0.28,1); /* @kind other */
+  --ease-in-out:cubic-bezier(0.5,0,0.3,1); /* @kind other */
+  /* Kid-facing feedback gets one springy overshoot; parent UI never bounces. */
+  --ease-bounce:cubic-bezier(0.3,1.6,0.5,1); /* @kind other */
+}
+@media (prefers-reduced-motion:reduce){:root{--dur-instant:0ms; /* @kind other */--dur-fast:0ms; /* @kind other */--dur-base:0ms; /* @kind other */--dur-slow:0ms; /* @kind other */--dur-celebrate:0ms; /* @kind other */}}
