@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Wallet — balance, activity, loans, lessons" subtitle="MoneyAmount, BalanceCard, ActivityRow, LoanCard, LessonCard, StatTile, ParentOnlyChip" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"><script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script><script src="../../_ds_bundle.js"></script><style>body{background:var(--surface-app);margin:0;padding:16px;font-family:var(--font-body)}#root{display:block}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.col{display:grid;gap:12px}</style></head><body><div id="root"></div>
+<script type="text/babel">const { MoneyAmount, BalanceCard, ActivityRow, LoanCard, LessonCard, StatTile, ParentOnlyChip, Card } = window.EddyWalletDesignSystem_7e6d2a;
+function Demo(){return <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,alignItems:'start'}}>
+<div className="col">
+<BalanceCard owner="Mia's wallet" balance={42.5} caption="Allowance lands Sunday — 3 days to go." chips={[{icon:'hand-coins',label:'$5 weekly'},{icon:'percent',label:'2% on savings'}]}/>
+<div className="row"><MoneyAmount value={42.5} size="lg" direction="neutral"/><MoneyAmount value={5} showSign/><MoneyAmount value={-4.25} showSign/><ParentOnlyChip/></div>
+<Card padding="var(--space-4)">
+<ActivityRow type="allowance" title="Weekly allowance" meta="Sunday · from Dad" amount={5}/>
+<ActivityRow type="spend" title="Comic book" meta="Tue · logged by Mia" amount={4.25} pending/>
+<ActivityRow type="interest" title="Savings interest" meta="1 March · 2% on $40" amount={0.8}/>
+<ActivityRow type="lesson" title="What is interest?" meta="Finished Monday" points={10}/>
+<ActivityRow type="withdraw" title="Cash for the fair" meta="Sat · by Dad" amount={10} parentOnly style={{borderBottom:'none'}}/>
+</Card>
+</div>
+<div className="col">
+<LoanCard reason="Lego set" borrowed={20} repaid={12} dueLabel="$2 every Sunday · 4 left" status="on-track"/>
+<LessonCard index={3} title="What is interest?" blurb="Money that grows while it waits." minutes={3} state="available"/>
+<LessonCard index={2} title="Saving vs. spending" blurb="Why waiting can get you more." minutes={4} state="done"/>
+<LessonCard index={4} title="Borrowing and paying back" blurb="A loan is a promise." state="locked"/>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
+<StatTile label="Spent this month" money={18.75} delta="Across 4 purchases" icon="arrow-up-right" tone="berry"/>
+<StatTile label="Lessons done" value="3 of 8" delta="Interest is next" icon="graduation-cap" tone="sky"/>
+</div>
+</div>
+</div>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>
