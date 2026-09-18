@@ -1,0 +1,16 @@
+@import "./fonts.css";
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./shape.css";
+@import "./motion.css";
+@import "./base.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}

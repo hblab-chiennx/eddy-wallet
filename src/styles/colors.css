@@ -1,0 +1,53 @@
+:root{
+  /* --- Base palette --------------------------------------------------- */
+  /* Eddy Teal: the brand's primary. Named for the swirl of an eddy. */
+  --teal-950:#06312B; --teal-900:#0A4A41; --teal-800:#0D6357; --teal-700:#12897A;
+  --teal-600:#17A693; --teal-500:#2FC0AA; --teal-300:#8CE0D2; --teal-200:#BDEFE6; --teal-100:#DFF7F2;
+  /* Sunbeam: rewards, allowance, celebration */
+  --sun-700:#B36F00; --sun-600:#E09100; --sun-500:#FFB226; --sun-400:#FFC24B; --sun-200:#FFE3A8; --sun-100:#FFF3D6;
+  /* Berry: spending, alerts, loans owed */
+  --berry-700:#B32E24; --berry-600:#D9483B; --berry-500:#FF6B5E; --berry-200:#FFC9C3; --berry-100:#FFE6E3;
+  /* Sky: parent mode accents, informational */
+  --sky-700:#1F5FA8; --sky-600:#2E7FD4; --sky-500:#5BA3E8; --sky-200:#C3DEF7; --sky-100:#E6F0FC;
+  /* Grape: lessons / learning */
+  --grape-700:#5B3FB0; --grape-600:#7558D6; --grape-200:#DAD1F7; --grape-100:#EEE9FC;
+  /* Ink + paper neutrals, warmed slightly so nothing reads clinical */
+  --ink-900:#12211F; --ink-800:#1B2A2E; --ink-700:#2E4247; --ink-600:#4A5F63;
+  --ink-500:#6B8085; --ink-400:#94A7AB; --ink-300:#C2CFD1; --ink-200:#E1E8E8; --ink-100:#EFF3F3;
+  --paper:#FFFFFF; --cream-100:#FFFBF4; --cream-200:#FFF6E9; --cream-300:#F6EFE3;
+
+  /* --- Semantic aliases ---------------------------------------------- */
+  --text-heading:var(--ink-900);
+  --text-body:var(--ink-700);
+  --text-muted:var(--ink-500);
+  --text-inverse:#FFFFFF;
+  --text-link:var(--teal-800);
+  --text-link-hover:var(--teal-600);
+
+  --surface-app:var(--cream-200);
+  --surface-card:var(--paper);
+  --surface-sunken:var(--cream-300);
+  --surface-inverse:var(--teal-900);
+  --surface-parent:var(--sky-100);
+
+  --brand-primary:var(--teal-700);
+  --brand-primary-hover:var(--teal-800);
+  --brand-primary-soft:var(--teal-100);
+  --brand-accent:var(--sun-400);
+  --brand-accent-ink:var(--sun-700);
+
+  --money-in:var(--teal-700);
+  --money-out:var(--berry-600);
+  --money-neutral:var(--ink-600);
+
+  --state-success:#1F8A5B; --state-success-soft:#DFF3E9;
+  --state-warning:var(--sun-600); --state-warning-soft:var(--sun-100);
+  --state-danger:var(--berry-600); --state-danger-soft:var(--berry-100);
+  --state-info:var(--sky-600); --state-info-soft:var(--sky-100);
+  --state-locked:var(--sky-700); --state-locked-soft:var(--sky-100);
+
+  --border-subtle:var(--ink-200);
+  --border-strong:var(--ink-300);
+  --border-ink:var(--ink-800);
+  --focus-ring:var(--teal-600);
+}
